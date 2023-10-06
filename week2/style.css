@@ -34,8 +34,13 @@ header {
 }
 
 /* Navigation Styles */
+nav {
+  position: sticky;
+  top: 77px;
+}
 nav ul {
   position: sticky;
+  top: 0;
   background-color: #333;
   color: #fff;
   text-align: center;
