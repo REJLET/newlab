@@ -4,13 +4,13 @@ body {
   background: scroll;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: Roboto Slab;
   color: #505050;
 }
 
 /* Header Styles */
 header {
-  background: linear-gradient(301deg, #d2369b, #000);
+  background: linear-gradient(301deg, #d2369b, #268dee);
   color: #fff;
   text-align: center;
   padding: 20px;
