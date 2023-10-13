@@ -41,9 +41,7 @@
 
       <main class="services">
         <h1>Gallery</h1>
-
-        <!-- Slide show -->
-
+        <!-- Slide Show -->
         <div class="container">
           <div class="mySlides">
             <div class="numbertext">1 / 8</div>
@@ -52,43 +50,64 @@
               alt="Gallery slide show"
               class="slideshow-img"
             />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">2 / 8</div>
             <img
               src="images/slide2.png"
               alt="Gallery slide show"
               class="slideshow-img"
             />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">3 / 8</div>
             <img
               src="images/slide3.png"
               alt="Gallery slide show"
               class="slideshow-img"
             />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 8</div>
             <img
               src="images/slide4.png"
               alt="Gallery slide show"
               class="slideshow-img"
             />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">5 / 8</div>
             <img
               src="images/slide5.png"
               alt="Gallery slide show"
               class="slideshow-img"
             />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">6 / 8</div>
             <img
               src="images/slide6.png"
               alt="Gallery slide show"
               class="slideshow-img"
             />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">7 / 8</div>
             <img
               src="images/slide7.png"
               alt="Gallery slide show"
               class="slideshow-img"
             />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">8 / 8</div>
             <img
               src="images/slide8.png"
               alt="Gallery slide show"
               class="slideshow-img"
             />
           </div>
-
           <a class="prev" onclick="plusSlides(-1)">❮</a>
           <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
@@ -113,37 +132,35 @@
     </div>
 
     <script>
-      // declare a variable for indexes
-      let slideIndex = 1;
-
-      showSlides(slideIndex);
-
+      // Declare a variable to keep track of the current slide position.
+      let slideIndex = 1; // Call the function to display the initial slide.
+      showSlides(slideIndex); // Function to navigate forward or backward in the slideshow.
       function plusSlides(n) {
         showSlides((slideIndex += n));
-      }
+      } // Function to jump to a specific slide in the slideshow.
       function currentSlide(n) {
         showSlides((slideIndex = n));
-      }
+      } // Main function to control the display of slides.
       function showSlides(n) {
-        let i;
+        let i; // Get all elements with class="mySlides" and "demo" as well as the caption text.
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("demo");
-        let captionText = document.getElementById("caption");
-
+        let captionText = document.getElementById("caption"); // Loop back to the first slide if having navigated past the last slide.
         if (n > slides.length) {
           slideIndex = 1;
-        }
-
+        } // Loop back to the last slide if having navigated before the first slide.
         if (n < 1) {
           slideIndex = slides.length;
-        }
-
+        } // Hide all the slides initially.
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
-        }
+        } // Remove the "active" class from all the dots.
         for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace("active", "");
-        }
+          dots[i].className = dots[i].className.replace(" active", "");
+        } // Display the current slide and add the "active" class to the current dot.
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active"; // Set the caption text based on the "alt" attribute of the active dot.
+        captionText.innerHTML = dots[slideIndex - 1].alt;
       }
     </script>
   </body>
