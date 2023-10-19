@@ -222,7 +222,7 @@ will be the Gallery slide show style*/ * {
   top: 0;
 }
 /* Style for the form: setting width, auto margin for centering, padding, background color, border radius for rounded corners, and font size */
-#form {
+form {
   width: 300px;
   margin: 20vh auto 0 auto; /* This centers the form vertically and horizontally */
   padding: 20px;
@@ -231,12 +231,12 @@ will be the Gallery slide show style*/ * {
   font-size: 12px;
 }
 /* Style for the form's heading: setting the text color and alignment */
-#form h1 {
+form h1 {
   color: #0f2027; /* Dark text color for the heading */
   text-align: center; /* Center-align the heading */
 }
 /* Style for the form's button: padding, top margin, full width, text color, background color, no border, and rounded corners */
-#form button {
+form button {
   padding: 10px;
   margin-top: 10px; /* Space above the button */
   width: 100%; /* Make the button expand the full width of the form */
@@ -272,9 +272,13 @@ will be the Gallery slide show style*/ * {
 .input-control.success input {
   border-color: #09c372; /* Green border to indicate successful input */
 }
-
+.field small {
+  color: #dc3545;
+}
 /* Style for input fields with class "error": red border */
-.input-control.error input {
+.input-control.error input.error,
+textarea.error,
+select.error input {
   border-color: #ff3860; /* Red border to indicate an error in input */
 }
 /* Style for the error message: text color, font size, and height */
