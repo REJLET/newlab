@@ -5,13 +5,15 @@ const app = express();
 const db = mysql.createConnection({
     host : 'localhost',
     user : 'root',
-    password : '',
-    database : 'nodejs-project'
+    password : 'root',
+    database : 'nodes-project',
+    socketPath : '/Applications/MAMP/tmp/mysql/mysql.sock',
+    port : 8889
 });
 
 db.connect((error)=>{
     if (error) {
-        console.log(error)
+        console.error(error)
 
     }
     else{
